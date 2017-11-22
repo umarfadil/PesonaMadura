@@ -11,6 +11,10 @@ import {
   Text,
   View
 } from 'react-native';
+import { Router, Scene, Actions, ActionConst } from 'react-native-router-flux';
+
+import LoginScreen from './src/component/LoginScreen';
+import Dashboard from './src/component/Dashboard';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -22,17 +26,22 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
-      </View>
+      <Router>
+	      <Scene key="root">
+	        <Scene key="loginScreen"
+            component={LoginScreen}
+            title="Login Screen"
+	        	animation='fade'
+            hideNavBar={true}
+	          initial={true}
+	        />
+	        <Scene key="dashboardScreen"
+	          component={Dashboard}
+            title="Dashboard Screen"
+	          animation='fade'
+	        />
+	      </Scene>
+	    </Router>
     );
   }
 }
