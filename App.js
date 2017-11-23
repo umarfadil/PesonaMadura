@@ -13,8 +13,8 @@ import {
 } from 'react-native';
 import { Router, Scene, Actions, ActionConst } from 'react-native-router-flux';
 
-import LoginScreen from './src/component/LoginScreen';
-import Dashboard from './src/component/Dashboard';
+import LoginScreen from './src/component/login/LoginScreen';
+import Dashboard from './src/component/dashboard/Dashboard';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +

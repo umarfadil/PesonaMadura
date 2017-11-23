@@ -7,7 +7,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Image, KeyboardAvoidingView} from 'react-native';
 import {Actions} from 'react-native-router-flux';
-import LoginForm from './LoginForm'
+import LoginForm from '../login/LoginForm'
 
 export default class LoginScreen extends Component < {} > {
     render() {
@@ -18,7 +18,7 @@ export default class LoginScreen extends Component < {} > {
                     <Image
                         resizeMode="contain"
                         style={styles.logo}
-                        source={require('../assets/logo-dark-bg.png')}/>
+                        source={require('../../assets/logo-dark-bg.png')}/>
 
                 </View>
                 <View style={styles.formContainer}>
