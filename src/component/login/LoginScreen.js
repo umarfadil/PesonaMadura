@@ -4,7 +4,7 @@
  * @flow
  */
 
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Platform, StyleSheet, Text, View, Image, KeyboardAvoidingView} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import LoginForm from '../login/LoginForm'
@@ -13,18 +13,18 @@ export default class LoginScreen extends Component < {} > {
     render() {
         return (
             <KeyboardAvoidingView behavior="padding" style={styles.container}>
-
-                <View style={styles.loginContainer}>
+            <View style={styles.loginContainer}>
                     <Image
                         resizeMode="contain"
                         style={styles.logo}
-                        source={require('../../assets/logo-dark-bg.png')}/>
-
+                        source={require('../../assets/logo.png')}/>
+                    <Text style={[styles.title]}>Pesona Madura</Text>
+                    <Text style={[styles.subtitle]}>Selamat Datang dan Berlibur di Pulau Madura</Text>
                 </View>
+
                 <View style={styles.formContainer}>
                     <LoginForm/>
                 </View>
-
             </KeyboardAvoidingView>
         );
     }
@@ -47,9 +47,17 @@ const styles = StyleSheet.create({
     },
     title:{
         color: "#FFF",
-        marginTop: 120,
-        width: 180,
+        marginTop: 5,
+        opacity: 0.9,
         textAlign: 'center',
-        opacity: 0.9
-}
+        marginTop: 165,
+        fontSize : 32
+    },
+    subtitle: {
+      color: '#FFF',
+      marginTop: 5,
+      opacity: 0.9,
+      textAlign: 'center',
+      marginBottom: 5
+    },
 });

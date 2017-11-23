@@ -133,7 +133,8 @@ export default class LoginScreen extends Component < {} > {
               </Col>
             </Row>
           </Grid>
-          <Button
+
+          <Button onPress={Actions.loginScreen}
             full
             style={{
             marginLeft: 8,

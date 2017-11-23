@@ -28,6 +28,7 @@ export default class LoginForm extends Component {
                     keyboardType='email-address'
                     returnKeyType="next"
                     placeholder='Email or Mobile Num'
+                    underlineColorAndroid = 'transparent'
                     placeholderTextColor='rgba(225,225,225,0.7)'/>
 
                 <TextInput
@@ -35,11 +36,13 @@ export default class LoginForm extends Component {
                     returnKeyType="go"
                     ref={(input) => this.passwordInput = input}
                     placeholder='Password'
+                    underlineColorAndroid = 'transparent'
                     placeholderTextColor='rgba(225,225,225,0.7)'
-                    secureTextEntry/> 
+                    secureTextEntry/>
                 <TouchableOpacity style={styles.buttonContainer} onPress={Actions.dashboardScreen}>
                     <Text style={styles.buttonText}>LOGIN</Text>
                 </TouchableOpacity>
+                <Text style={styles.text}>Dont have account yet? Register Here </Text>
             </View>
         );
     }
@@ -50,10 +53,10 @@ const styles = StyleSheet.create({
         padding: 20
        },
        input:{
-           height: 40,
+           height: 45,
            backgroundColor: 'rgba(225,225,225,0.2)',
            marginBottom: 10,
-           padding: 10,
+           padding: 16,
            color: '#fff'
        },
        buttonContainer:{
@@ -64,9 +67,16 @@ const styles = StyleSheet.create({
            color: '#fff',
            textAlign: 'center',
            fontWeight: '700'
-       }, 
+       },
        loginButton:{
          backgroundColor:  '#2980b6',
           color: '#fff'
+   },
+   text: {
+     color: '#FFF',
+     marginTop: 16,
+     opacity: 0.9,
+     textAlign: 'center',
+     marginBottom: 5
    }
 });
